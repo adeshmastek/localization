@@ -1,0 +1,123 @@
+.container{
+    display:grid;
+    grid-template-columns:1fr 2.2fr;
+    padding: 0 0 0 40px;
+    background-color: #fafafa;
+    margin: 100px 0px;
+}
+
+.infoWrapper{
+    padding:0px 15px;
+}
+.subTitle{
+    color:#0847a6;
+    font-size: 14px;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.title{
+    color:#212529;
+    font-size: 34px;
+    margin:24px 0 0 0;
+    font-family: Poppins Bold;
+}
+
+.description{
+    color:#212529;
+    font-family: Poppins Medium;
+    line-height: 1.5em;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.buttonWrapper{
+    margin-top:40px;
+    padding-bottom: 20px;
+}
+
+.button {
+    background: transparent;
+    color: #001c71;
+    box-shadow: none;
+    border: 1px solid #001c71;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 8px 23px;
+    cursor: pointer;
+    text-align: center;
+    justify-content: center;
+}
+
+.button:hover{
+    background: #001c71;
+    color: #fafafa;
+}
+
+@media (max-width:1024px) {
+  
+    .title {
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .description{
+        color:#212529;
+        font-family: Poppins Regular;
+        line-height: 1.5em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .button {
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 20px;
+    }
+  }
+
+  @media (max-width:768px) {
+
+    .container{
+        grid-template-columns:1fr;
+        margin: 30px 0px;
+        padding: 0;
+        margin-bottom: -17px;
+        line-height: 0;
+    }
+
+    .infoWrapper{
+        padding: 0px 30px;
+        margin-bottom: 20px;
+    }
+  
+    .title {
+      font-size: 20px;
+      line-height: 1.2;
+      margin: 0;
+      margin-bottom: 10px;
+    }
+
+    .description{
+        color:#212529;
+        font-family: Poppins Regular;
+        line-height: 1.5em;
+        text-align: justify;
+        text-justify: inter-word;
+    }
+
+    .button {
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 20px;
+    }
+  }
