@@ -49,6 +49,11 @@ export function Header ({ navBar }) {
               </ul>
             </div>
           </div>
+          <select>
+            <option  value="en-US">English</option>
+            <option value="de-fr">French</option>
+            <option value="ar">Arabic</option>
+          </select>
         </div>
       </div>
     </div>

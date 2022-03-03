@@ -16,3 +16,9 @@ export const fetchResource = async (resourceId) => {
   const resouceData = await resouceResponse.json()
   return resouceData
 }
+
+// export const fetchLocale = async (locale) => {
+//   const resouceResponse = await fetch(`https://cdn.contentful.com/spaces/4nyg7pl7kt91/environments/master/entries/${resourceId || ''}?access_token=4tTl-I76Lz9AIUj_t2qID4SPXkCpe9y7Fly3_yiX0_U`)
+//   const resouceData = await resouceResponse.json()
+//   return resouceData
+// }
