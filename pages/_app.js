@@ -9,7 +9,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <AppContext.Provider
       value={{
-        setLanguageSelected: setLanguageSelected,
+        setLanguageSelected: setLanguageSelected
       }}
     >
       <Component {...pageProps} />

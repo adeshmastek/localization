@@ -2,14 +2,14 @@ import styles from './Header.module.css'
 import Image from 'next/image'
 import { useState, useContext } from 'react'
 import Link from 'next/link'
-import {AppContext} from '../../pages/AppContext'
+import AppContext from '../../pages/AppContext'
 
 export function Header ({ navBar }) {
   const context = useContext(AppContext)
   const [isActive, setActive] = useState(false)
   
   const handleLocale = (e) => {
-    context.value.setLanguageSelected(e.target.value)
+    context.setLanguageSelected(e.target.value)
   }
 
   const handleToggle = () => {
