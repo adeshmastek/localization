@@ -1,15 +1,13 @@
+import AppContext from "../context/AppContext";
+import { useEffect, useState } from 'react';
 import '../styles/globals.css'
 import '../styles/custom.css'
-import AppContext from "./AppContext";
-import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
-  const [languageSelected, setLanguageSelected] = useState("en-US");
-  console.log(languageSelected);
   return (
     <AppContext.Provider
       value={{
-        setLanguageSelected: setLanguageSelected
+        lang: 'en-US'
       }}
     >
       <Component {...pageProps} />

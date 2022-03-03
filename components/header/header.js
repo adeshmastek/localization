@@ -1,15 +1,16 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
-import { useState, useContext } from 'react'
+import { useState, useContext, useEffect } from 'react'
 import Link from 'next/link'
-import AppContext from '../../pages/AppContext'
+import AppContext from '../../context/AppContext'
 
 export function Header ({ navBar }) {
   const context = useContext(AppContext)
   const [isActive, setActive] = useState(false)
   
   const handleLocale = (e) => {
-    context.setLanguageSelected(e.target.value)
+    context.lang = e.target.value
+    console.log(context.lang);
   }
 
   const handleToggle = () => {
