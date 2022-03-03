@@ -1,13 +1,19 @@
 import '../styles/globals.css'
 import '../styles/custom.css'
-
-import { AppWrapper } from '../context/state';
+import AppContext from "./AppContext";
+import { useState } from 'react';
 
 function MyApp({ Component, pageProps }) {
+  const [languageSelected, setLanguageSelected] = useState("en-US");
+  console.log(languageSelected);
   return (
-    <AppWrapper>
+    <AppContext.Provider
+      value={{
+        setLanguageSelected: setLanguageSelected,
+      }}
+    >
       <Component {...pageProps} />
-    </AppWrapper>
+    </AppContext.Provider>
   )
 }
 

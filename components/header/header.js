@@ -1,10 +1,17 @@
 import styles from './Header.module.css'
 import Image from 'next/image'
-import { useState } from 'react'
+import { useState, useContext } from 'react'
 import Link from 'next/link'
+import {AppContext} from '../../pages/AppContext'
 
 export function Header ({ navBar }) {
+  const context = useContext(AppContext)
   const [isActive, setActive] = useState(false)
+  
+  const handleLocale = (e) => {
+    context.value.setLanguageSelected(e.target.value)
+  }
+
   const handleToggle = () => {
     setActive(!isActive)
   }
@@ -49,8 +56,8 @@ export function Header ({ navBar }) {
               </ul>
             </div>
           </div>
-          <select>
-            <option  value="en-US">English</option>
+          <select onChange={handleLocale}>
+            <option value="en-US">English</option>
             <option value="de-fr">French</option>
             <option value="ar">Arabic</option>
           </select>
